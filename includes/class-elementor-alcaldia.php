@@ -34,7 +34,7 @@ class Elementor_Alcaldia {
 	}
 
 	public function register_widgets() {
-		require_once ELEMENTOR_ALCALDIA_PATH . 'widgets/test.php';
+		require_once ELEMENTOR_ALCALDIA_PATH . 'widgets/contenidos-destacados/contenidos-destacados.php';
 
 		$test_widget = new Alcaldia_Widget_Contenidos_Destacados();
 

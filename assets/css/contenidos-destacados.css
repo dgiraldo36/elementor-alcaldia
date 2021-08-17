@@ -1,0 +1,81 @@
+.elementor-widget-contenidos-destacados .pp-advanced-tabs-wrapper.at-horizontal .pp-advanced-tabs-title {
+	width: 24%;
+	box-shadow: 10px 10px 25px #00000029;
+}
+
+.elementor-widget-contenidos-destacados .pp-tabs-panel {
+	box-shadow: 10px 10px 25px #00000029;
+}
+
+.elementor-widget-contenidos-destacados .pp-advanced-tabs-title .cd-top-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.pp-advanced-tabs-wrapper .pp-advanced-tabs-title.pp-tab-active {
+	transition: none;
+	box-shadow: 10px -20px 35px #00000010;
+}
+
+.elementor-widget-contenidos-destacados .pp-advanced-tabs-wrapper.at-horizontal .pp-advanced-tabs-title .cd-top-text .pp-accordion-toggle-icon {
+	display: contents;
+}
+
+.elementor-widget-contenidos-destacados .pp-advanced-tabs-wrapper.at-horizontal .pp-advanced-tabs-title .cd-top-text .pp-advanced-tabs-title-text,
+.elementor-widget-contenidos-destacados .pp-advanced-tabs-content-wrapper .pp-advanced-tabs-title .cd-top-text .pp-advanced-tabs-title-inner {
+	font-size: 14px;
+}
+
+.elementor-widget-contenidos-destacados .pp-advanced-tabs-title:not(.pp-tab-active) {
+	margin-bottom: 20px;
+}
+
+.elementor-widget-contenidos-destacados .pp-advanced-tabs-title.pp-tab-active {
+	padding-bottom: 30px !important;
+}
+
+.elementor-widget-contenidos-destacados .pp-tab-active {
+	z-index: 10;
+}
+
+.elementor-widget-contenidos-destacados .pp-tab-active .pp-accordion-toggle-icon-close {
+	display: none;
+}
+
+.elementor-widget-contenidos-destacados .pp-tab-active .pp-accordion-toggle-icon-open {
+	display: block;
+}
+
+.elementor-widget-contenidos-destacados .cd-title-text-lines {
+	position: relative;
+	text-align: right;
+}
+
+.elementor-widget-contenidos-destacados .cd-title-text-lines div {
+	padding-right: 10px;
+}
+
+.elementor-widget-contenidos-destacados .pp-advanced-tabs-title .cd-title-text {
+    position: relative;
+}
+
+.elementor-widget-contenidos-destacados .pp-advanced-tabs-title .cd-title-text .pp-icon {
+	position: absolute;
+	display: flex;
+	width: 35%;
+    height: 100%;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.elementor-widget-contenidos-destacados .pp-advanced-tabs-content-wrapper .pp-advanced-tabs-content.pp-tab-active {
+	margin-bottom: 30px;
+}
+
+.elementor-widget-contenidos-destacados .pp-advanced-tabs-content-wrapper .pp-advanced-tabs-title.pp-tab-responsive {
+	flex-direction: column;
+}
