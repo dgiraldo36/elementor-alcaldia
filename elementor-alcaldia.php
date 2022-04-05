@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Elementor Alcaldía
  * Description: Crea y modifica las Variables de Elementor y otros aspectos para el sitio de la Alcaldía de Medellín
- * Version: 0.0.3
+ * Version: 0.0.4
  * Author: Secretaría de Innovación Digital
  *
  */
