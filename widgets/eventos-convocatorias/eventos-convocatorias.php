@@ -158,7 +158,7 @@ class Widget_Alcaldia_Eventos_Convocatorias extends Posts_Base {
 				        }
 			          ?>
 			        </p>
-			        <a href="<?php the_permalink(); ?>" class="botoneventos_grid">Conozca más</a>
+			        <a href="<?php the_permalink(); ?>" class="botoneventos_grid">Conoce más</a>
 			      </div>
 			      <?php endwhile; ?>
 			    <?php else : ?>
@@ -418,25 +418,18 @@ class Widget_Alcaldia_Eventos_Convocatorias extends Posts_Base {
 			$query_args['post__not_in'] = array( get_the_ID() );
 		}
 
-		$date = new DateTime();
-		$date->add(DateInterval::createFromDateString('yesterday'));
-
-		$query_args['meta_key'] = 'inicio_del_evento';
+		$date_now = date('Ymd');
 
 		$query_args['meta_query'] = array(
-			array(
-				'key' 	  => 'fin_del_evento',
-				'value'   => $date->format('Ymd'),
-				'compare' => '>=',
-			),
-			array(
-				'key'     => 'inicio_del_evento',
-				'compare' => 'EXISTS',
-			),
+	        array(
+	            'key' => 'inicio_del_evento',
+	            'value' => $date_now,
+	            'compare' => '>=',
+	        ),
 		);
 
 		$query_args['orderby'] = 'meta_value';
-		$query_args['order'] = 'DESC';
+		$query_args['order'] = 'ASC';
 
 		return apply_filters( "ppe_{$widget_type}_query_args", $query_args, $settings );
 	}

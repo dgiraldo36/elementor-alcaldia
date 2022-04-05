@@ -870,6 +870,7 @@ class Widget_Alcaldia_Contenidos_Destacados extends Advanced_Tabs {
 			$tab_id = 'pp-advanced-tabs-title-' . $id_int . $tab_count;
 			$tab_title = wp_kses_post( $item['tab_title'] );
 			$image_key = $this->get_repeater_setting_key( 'image', 'cd-item', $tab_count );
+			$image_url = $item['image']['url'];
 
 			if ( ! empty( $item['url_contenido_destacado']['url'] ) ) {
 				$button_key = $this->get_repeater_setting_key( 'button', 'cd-items', $tab_count );
@@ -913,11 +914,11 @@ class Widget_Alcaldia_Contenidos_Destacados extends Advanced_Tabs {
 				</div>
 			</div>
 			<div <?php echo wp_kses_post( $this->get_render_attribute_string( $tab_content_setting_key ) ); ?>>
-				<div class="cd-content">
+				<div class="cd-content <?php echo $image_url ? '' : 'sin-imagen';?>">
 					<<?php esc_html_e( $top_title_tag ); ?> class="cd-content-title">
 						<?php echo $tab_title; ?>
 					</<?php esc_html_e( $top_title_tag ); ?>>
-					<p class="cd-content-text"><?php echo $this->get_tabs_content( $item ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+					<div class="cd-content-text"><?php echo $this->get_tabs_content( $item ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 					<?php if ( ! empty( $item['url_contenido_destacado']['url'] ) ) { ?>
 					<a <?php echo wp_kses_post( $this->get_render_attribute_string( $button_key ) ); ?>>
 						<span class="pp-button-text">CONOCE MÁS</span>
