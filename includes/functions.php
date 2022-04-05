@@ -253,3 +253,8 @@ if ( version_compare( PHP_VERSION, '7.3.0' ) >= 0 ) {
 
 	endif;
 }
+
+/*
+ * Activar acción que forza a las cookies a usar el parámetro "Secure"
+ */
+add_filter( 'secure_logged_in_cookie', '__return_true' );
