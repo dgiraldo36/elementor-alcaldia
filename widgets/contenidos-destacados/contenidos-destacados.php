@@ -14,7 +14,7 @@ use Elementor\Icons_Manager;
 use Elementor\Repeater;
 use Elementor\Utils;
 
-class Alcaldia_Widget_Contenidos_Destacados extends Advanced_Tabs {
+class Widget_Alcaldia_Contenidos_Destacados extends Advanced_Tabs {
 	public function get_name() {
 		return 'contenidos-destacados';
 	}
@@ -72,9 +72,9 @@ class Alcaldia_Widget_Contenidos_Destacados extends Advanced_Tabs {
 		$repeater->start_controls_tabs( 'tabs_at' );
 
 		$repeater->start_controls_tab(
-			'tab_content',
+			'tab_titulos',
 			array(
-				'label' => 'Contenido',
+				'label' => 'Títulos',
 			)
 		);
 
@@ -117,51 +117,6 @@ class Alcaldia_Widget_Contenidos_Destacados extends Advanced_Tabs {
 					'active'   => true,
 				],
 			]
-		);
-
-		$repeater->add_control(
-			'content_type',
-			[
-				'type' => Controls_Manager::HIDDEN,
-				'default' => 'tab_content',
-			]
-		);
-
-		$repeater->add_control(
-			'content',
-			[
-				'label'                 => 'Contenido',
-				'type'                  => Controls_Manager::WYSIWYG,
-				'default'               => 'Texto del Contenido Destacado. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.',
-				'dynamic'               => [ 'active' => true ],
-				'condition'             => [
-					'content_type'  => 'tab_content',
-				],
-			]
-		);
-
-		$repeater->add_control(
-			'url_contenido_destacado',
-			[
-				'label'                 => 'URL botón "CONOCE MÁS',
-				'type'                  => Controls_Manager::URL,
-				'label_block'           => true,
-				'dynamic'               => [
-					'active'   => true,
-				],
-				'condition'             => [
-					'content_type'  => 'tab_content',
-				],
-			]
-		);
-
-		$repeater->end_controls_tab();
-
-		$repeater->start_controls_tab(
-			'tab_icon',
-			array(
-				'label' => 'Ícono',
-			)
 		);
 
 		$repeater->add_control(
@@ -234,6 +189,67 @@ class Alcaldia_Widget_Contenidos_Destacados extends Advanced_Tabs {
 					'pp_icon_type' => 'image',
 				),
 			)
+		);
+
+		$repeater->end_controls_tab();
+
+		$repeater->start_controls_tab(
+			'tab_content',
+			array(
+				'label' => 'Contenido',
+			)
+		);
+
+		$repeater->add_control(
+			'content_type',
+			[
+				'type' => Controls_Manager::HIDDEN,
+				'default' => 'tab_content',
+			]
+		);
+
+		$repeater->add_control(
+			'content',
+			[
+				'label'                 => 'Contenido',
+				'type'                  => Controls_Manager::WYSIWYG,
+				'default'               => 'Texto del Contenido Destacado. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.',
+				'dynamic'               => [ 'active' => true ],
+				'condition'             => [
+					'content_type'  => 'tab_content',
+				],
+			]
+		);
+
+		$repeater->add_control(
+			'image',
+			[
+				'label'                 => 'Elegir Imagen',
+				'type'                  => Controls_Manager::MEDIA,
+				'label_block'           => true,
+				'dynamic'               => [
+					'active'   => true,
+				],
+				'default'               => [
+					'url' => Utils::get_placeholder_image_src(),
+				],
+			]
+		);
+
+		$repeater->add_control(
+			'url_contenido_destacado',
+			[
+				'label'                 => 'URL botón "CONOCE MÁS"',
+				'type'                  => Controls_Manager::URL,
+				'label_block'           => true,
+				'dynamic'               => [
+					'active'   => true,
+				],
+				'required'    => 'yes',
+				'condition'             => [
+					'content_type'  => 'tab_content',
+				],
+			]
 		);
 
 		$repeater->end_controls_tab();
@@ -426,6 +442,8 @@ class Alcaldia_Widget_Contenidos_Destacados extends Advanced_Tabs {
 				'size_units' => array( 'px' ),
 				'selectors'  => array(
 					'{{WRAPPER}} .pp-advanced-tabs-title .cd-title-text .pp-icon' => 'font-size: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .cd-title-text-lines div' => 'height: calc( {{SIZE}}{{UNIT}}/2 + 10px );',
+
 				),
 			)
 		);
@@ -570,7 +588,7 @@ class Alcaldia_Widget_Contenidos_Destacados extends Advanced_Tabs {
 			array(
 				'label'     => 'Color Fondo Título Línea 1',
 				'type'      => Controls_Manager::COLOR,
-				'default'   => '#F3AB3C',
+				'default'   => '#58C4CF',
 				'selectors' => array(
 					'{{WRAPPER}} .cd-title-text-line-1' => 'background-color: {{VALUE}}',
 				),
@@ -718,10 +736,10 @@ class Alcaldia_Widget_Contenidos_Destacados extends Advanced_Tabs {
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', 'em', '%' ),
 				'default'    => array(
-					'top'    => 10,
-					'bottom' => 10,
-					'left'   => 10,
-					'right'  => 10,
+					'top'    => 17,
+					'bottom' => 12,
+					'left'   => 19,
+					'right'  => 19,
 				),
 				'selectors'  => array(
 					'{{WRAPPER}} .pp-advanced-tabs-content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
@@ -737,7 +755,7 @@ class Alcaldia_Widget_Contenidos_Destacados extends Advanced_Tabs {
 	public function __construct($data = [], $args = null) {
 		parent::__construct($data, $args);
 		wp_register_style( 'contenidos-destacados-css', ELEMENTOR_ALCALDIA_URL . 'assets/css/contenidos-destacados.css');
-		wp_register_script( 'contenidos-destacados-js', ELEMENTOR_ALCALDIA_URL . 'assets/js/contenidos-destacados.js', [ 'elementor-frontend' ], ELEMENTOR_ALCALDIA_VERSION, true );
+		wp_register_script( 'contenidos-destacados-js', ELEMENTOR_ALCALDIA_URL . 'assets/js/contenidos-destacados.js', [ 'elementor-frontend', 'pp-advanced-tabs' ], ELEMENTOR_ALCALDIA_VERSION, true );
 	}
 
 	protected function render() {
@@ -850,6 +868,20 @@ class Alcaldia_Widget_Contenidos_Destacados extends Advanced_Tabs {
 			$tab_count = $index + 1;
 			$default_content = '';
 			$tab_id = 'pp-advanced-tabs-title-' . $id_int . $tab_count;
+			$tab_title = wp_kses_post( $item['tab_title'] );
+			$image_key = $this->get_repeater_setting_key( 'image', 'cd-item', $tab_count );
+
+			if ( ! empty( $item['url_contenido_destacado']['url'] ) ) {
+				$button_key = $this->get_repeater_setting_key( 'button', 'cd-items', $tab_count );
+
+				$this->add_render_attribute( $button_key, 'class', [
+					'cd-button',
+					'elementor-button',
+					'elementor-size-md',
+				] );
+
+				$this->add_link_attributes( $button_key, $item['url_contenido_destacado'] );
+			}
 
 			$tab_content_setting_key = $this->get_repeater_setting_key( 'content', 'tab_features', $index );
 
@@ -868,7 +900,7 @@ class Alcaldia_Widget_Contenidos_Destacados extends Advanced_Tabs {
 			<div class="pp-advanced-tabs-title pp-tabs-label pp-tab-responsive <?php echo esc_attr( $default_content ) . esc_attr( $hover_class ); ?>" data-index ="<?php echo esc_attr( $id_int ) . esc_attr( $tab_count ); ?>">
 				<div class="cd-top-text">
 					<<?php esc_html_e( $top_title_tag ); ?> class="pp-advanced-tabs-title-inner">
-						<?php echo wp_kses_post( $item['tab_title'] ); ?>
+						<?php echo $tab_title; ?>
 					</<?php esc_html_e( $top_title_tag ); ?>>
 					<?php $this->render_tab_top_title_icon( $item ); ?>
 				</div>
@@ -881,7 +913,35 @@ class Alcaldia_Widget_Contenidos_Destacados extends Advanced_Tabs {
 				</div>
 			</div>
 			<div <?php echo wp_kses_post( $this->get_render_attribute_string( $tab_content_setting_key ) ); ?>>
-				<?php echo $this->get_tabs_content( $item ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+				<div class="cd-content">
+					<<?php esc_html_e( $top_title_tag ); ?> class="cd-content-title">
+						<?php echo $tab_title; ?>
+					</<?php esc_html_e( $top_title_tag ); ?>>
+					<p class="cd-content-text"><?php echo $this->get_tabs_content( $item ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+					<?php if ( ! empty( $item['url_contenido_destacado']['url'] ) ) { ?>
+					<a <?php echo wp_kses_post( $this->get_render_attribute_string( $button_key ) ); ?>>
+						<span class="pp-button-text">CONOCE MÁS</span>
+					</a>
+					<?php } ?>
+				</div>
+				<?php
+				if ( $item['image']['url'] ) {
+					$image_url = Group_Control_Image_Size::get_attachment_image_src( $item['image']['id'], 'image', $settings );
+
+					if ( ! $image_url ) {
+						$image_url = $item['image']['url'];
+					}
+
+					$this->add_render_attribute( $image_key, [
+						'src' => $image_url,
+					] );
+				?>
+				<div class="cd-content-image">
+					<img <?php echo wp_kses_post( $this->get_render_attribute_string( $image_key ) ); ?>>
+				</div>
+				<?php
+				}
+				?>
 			</div>
 			</div>
 			<?php

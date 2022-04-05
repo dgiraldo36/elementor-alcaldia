@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Elementor Alcaldía
  * Description: Crea y modifica las Variables de Elementor y otros aspectos para el sitio de la Alcaldía de Medellín
- * Version: 0.0.1
+ * Version: 0.0.3
  * Author: Secretaría de Innovación Digital
  *
  */
@@ -28,16 +28,4 @@ function elementor_alcaldia_init () {
     }
 
     Elementor_Alcaldia::instance();    
-}
-
-
-add_action( 'ppe_before_single_post_button', 'hea_boton_post', 10, 2 );
-
-
-function hea_boton_post( $post_id, $settings ) {
-    if ( $settings && 'variable-tys' === $settings['_css_classes'] ) {
-        ?>
-        <a href="<?php esc_attr_e( the_field( 'url_del_tramite', get_the_ID() ) ); ?>" class="boton-realizar-tys button-<?php echo get_the_ID() ?>"><span class="boton-tys-texto">Realizar</span></a>
-        <?php
-    }
 }

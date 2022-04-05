@@ -1,0 +1,170 @@
+/*.elementor-widget-eventos-convocatorias .eventos_grid_proximos  {
+    width: 100%;
+    max-width: 1190px;
+    margin: auto;
+  }
+  
+.elementor-widget-eventos-convocatorias .eventos_grid_proximos .grid_ {
+  overflow: hidden;
+  padding: 20px;
+}
+
+.elementor-widget-eventos-convocatorias .eventos_grid_proximos .grid_ .categoria_even {
+  color: #FF8403;
+  text-transform: uppercase;
+  font-size: 12px;
+  overflow: hidden;
+}
+.elementor-widget-eventos-convocatorias .eventos_grid_proximos .grid_ .categoria_even li a {
+  color: var(--narajna);
+}
+.elementor-widget-eventos-convocatorias .eventos_grid_proximos .grid_ .categoria_even li {
+  float: left;
+  margin-left: 18px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.elementor-widget-eventos-convocatorias .eventos_grid_proximos .grid_ .grid {
+  float: left;
+  width: 100%;
+  max-width: 33.3%;
+  padding: 20px;
+}
+.elementor-widget-eventos-convocatorias .eventos_grid_proximos .grid_ .grid img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+.elementor-widget-eventos-convocatorias .eventos_grid_proximos .grid_ .grid h2 {
+  font-size: 20px;
+  letter-spacing: -0.5px;
+  line-height: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.elementor-widget-eventos-convocatorias .eventos_grid_proximos .grid_ .grid h2 a {
+  color: #000;
+}
+.elementor-widget-eventos-convocatorias .eventos_grid_proximos .grid_ .grid p {
+  font-size: 16px;
+  color: #1C1C1C;
+}
+.elementor-widget-eventos-convocatorias .eventos_grid_proximos .grid_.despliegue_principal .grid .listado_vim ul {
+  padding-left: 10px;
+}
+.elementor-widget-eventos-convocatorias .eventos_grid_proximos .grid_ .grid .botoneventos_mas_ {
+  color: #14B8CE;
+  transition: 0.5s;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.elementor-widget-eventos-convocatorias .eventos_grid_proximos .grid_ .grid .botoneventos_mas_:hover {
+  color: var(--naranja);
+}
+.elementor-widget-eventos-convocatorias .eventos_grid_proximos .grid_ {
+  padding: 0 20px;
+}
+
+.elementor-widget-eventos-convocatorias .eventos_grid_proximos .grid_ .grid .botoneventos_grid {
+  color: #14B8CE;
+  transition: 0.5s;
+  border-radius: 20px;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.elementor-widget-eventos-convocatorias .eventos_grid_proximos .grid_ .grid .botoneventos_grid:hover {
+  color: #FF8403;
+}
+.elementor-widget-eventos-convocatorias .eventos_grid_proximos .grid_.despliegue_principal .grid:first-child {
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+  width: 100%;
+  max-width: 100%;
+  transition: 0.5s;
+}
+.elementor-widget-eventos-convocatorias .eventos_grid_proximos .grid_ .grid:hover {
+  box-shadow: 0px 3px 20px #00000029;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.elementor-widget-eventos-convocatorias .eventos_grid_proximos .grid_.despliegue_principal .grid:first-child img {
+  float: left;
+  width: 400px;
+  height: auto;
+  margin-right: 20px;
+  margin-bottom: 0px;
+}
+.elementor-widget-eventos-convocatorias .eventos_grid_proximos .grid_.despliegue_principal .grid:first-child p {
+  display: block;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 300;
+}
+.elementor-widget-eventos-convocatorias .eventos_grid_proximos .grid_.despliegue_principal .grid:first-child h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-family: var(--fuente-montserrat);
+  min-height: auto;
+}
+.elementor-widget-eventos-convocatorias .eventos_grid_proximos .grid_.despliegue_principal .grid:first-child h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-family: var(--fuente-montserrat);
+  min-height: auto;
+}
+.elementor-widget-eventos-convocatorias .eventos_grid_proximos .dato_evento_modulo {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.elementor-widget-eventos-convocatorias .eventos_grid_proximos .dato_evento_modulo span {
+  font-size: 12px;
+  line-height: 15px;
+  color: #909090;
+  display: inline-block;
+}
+
+@media (max-width: 992px)
+.eventos_grid_proximos .grid_ .grid {
+    max-width: 100%;
+}*/
+
+.eventos_grid_proximos .grid_ {
+  padding: 0 20px;
+}
+
+.eventos_grid_proximos .grid_.despliegue_principal .grid:first-child img {
+  float: left;
+  width: 400px;
+  height: auto;
+  margin-right: 20px;
+  margin-bottom: 0px;
+}
+.eventos_grid_proximos .grid_.despliegue_principal .grid:first-child p {
+  display: block;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 300;
+}
+.eventos_grid_proximos .grid_.despliegue_principal .grid:first-child h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-family: var(--fuente-montserrat);
+  min-height: auto;
+}
+.eventos_grid_proximos .grid_.despliegue_principal .grid:first-child h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-family: var(--fuente-montserrat);
+  min-height: auto;
+}

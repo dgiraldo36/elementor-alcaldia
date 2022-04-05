@@ -1,0 +1,114 @@
+.estado_tiempo_ .grid_:nth-of-type(2) {
+	max-width: 35%;
+}
+
+.estado_tiempo_ .grid_ {
+	max-width: 20%;
+}
+
+.estado_tiempo_ .grid_ .select_formulario select {
+	width: 20vw;
+	max-width: 260px;
+	background-color: transparent;
+    border: none;
+    padding-right: 10%;
+    -webkit-padding-end: 10%;
+}
+
+.estado_tiempo_ .grid_ .select_formulario select option {
+	max-width: 90%;
+}
+
+.estado_tiempo_ .grid_ .situ_t.siata_estado_buena i ion-icon {
+	color: #21cf18;
+}
+
+.estado_tiempo_ .grid_ .situ_t.siata_estado_moderada i ion-icon {
+	color: #fce55d;
+}
+
+.estado_tiempo_ .grid_ .situ_t.siata_estado_danina_gs i ion-icon {
+	color: #E8874B;
+}
+
+.estado_tiempo_ .grid_ .situ_t.siata_estado_danina i ion-icon {
+	color: #CD4441;
+}
+
+.estado_tiempo_ .grid_ .situ_t.siata_estado_muy_danina i ion-icon {
+	color: #4C1666;
+}
+
+.estado_tiempo_ .grid_ .situ_t.siata_estado_no_aplica i ion-icon {
+	color: #FFFFFF;
+}
+
+.estado_tiempo_ .grid_ .situ_t.siata_estado_sin_datos i ion-icon {
+	color: #4a4a4a;
+}
+
+.estado_tiempo_ .grid_ .texto_inf,
+.estado_tiempo_ .grid_ .select_formulario,
+.estado_tiempo_ .grid_ .estadot,
+.estado_tiempo_ .grid_ .clima {
+	display: inline-block;
+	float: none;
+	padding-top: 6px;
+}
+
+.estado_tiempo_ .grid_ .situ_t {
+	padding-top: 6px;
+}
+
+@media (max-width: 992px)  {
+	.estado_tiempo_ .grid_:first-of-type {
+		max-width: 100%;
+	}
+
+	.estado_tiempo_ .grid_:nth-of-type(2) {
+		text-align: right;
+		max-width: 60%;
+	}
+
+	.estado_tiempo_ .grid_:last-of-type {
+		max-width: 30%;
+		margin-top: 0;
+	}
+
+	.estado_tiempo_ .grid_ .situ_t {
+		text-align: left;
+		margin-left: 20px;
+	}
+
+	.estado_tiempo_ .grid_ img {
+		float: none;
+	}
+
+	.estado_tiempo_ .grid_ .texto_inf,
+	.estado_tiempo_ .grid_ .select_formulario {
+		display: inline-block;
+		float: none;
+	}
+
+	.estado_tiempo_ .grid_ .situ_t {
+	padding-top: 6px;
+}
+}
+
+@media (max-width: 780px) {
+	.estado_tiempo_ .grid_,
+	.estado_tiempo_ .grid_:nth-of-type(2),
+	.estado_tiempo_ .grid_:last-of-type {
+		max-width: 100%;
+		text-align: center;
+	}
+
+	.estado_tiempo_ .grid_ .situ_t {
+		text-align: center;
+	}
+
+	.estado_tiempo_ .grid_ .select_formulario select {
+		max-width: 300px;
+		width: auto;
+	}
+}

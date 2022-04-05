@@ -1,0 +1,222 @@
+.elementor-widget-biblioteca-multimedia .list_articulos .listado_loadmore {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.elementor-widget-biblioteca-multimedia .list_articulos .listado_loadmore .grid {
+max-width: 20%;
+padding: 10px;
+margin-bottom: 10px;
+flex: 1 0 21%;
+}
+
+.elementor-widget-biblioteca-multimedia .list_articulos .listado_loadmore .grid img {
+width: 100%;
+height: 145px;
+object-fit: cover;
+margin-bottom: 0;
+}
+.elementor-widget-biblioteca-multimedia .list_articulos .listado_loadmore .grid h2 {
+display: block;
+width: 100%;
+margin-bottom: 6px;
+font-size: 18px;
+font-weight: 600;
+font-family: var(--fuente-montserrat);
+}
+.elementor-widget-biblioteca-multimedia .list_articulos .listado_loadmore .grid h2 a {
+  color: #000;
+}
+.elementor-widget-biblioteca-multimedia .list_articulos .listado_loadmore .grid h3 {
+  display: block;
+  width: 100%;
+  margin-bottom: 6px;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: var(--fuente-montserrat);
+}
+.elementor-widget-biblioteca-multimedia .list_articulos .listado_loadmore .grid h3 a {
+color: #000;
+}
+
+.elementor-widget-biblioteca-multimedia .tabs_multimedias {
+  margin-top: 0;
+}
+.elementor-widget-biblioteca-multimedia .tabs_multimedias .nav-pills {
+  border-bottom: 1px solid #909090;
+  padding-bottom: 5.5px;
+}
+.elementor-widget-biblioteca-multimedia .tabs_multimedias .nav-item .titulo_tabs {
+font-size: 19px;
+color: #909090;
+letter-spacing: -0.15px;
+margin-right: 40px;
+}
+.elementor-widget-biblioteca-multimedia .tabs_multimedias .nav-item .titulo_tabs:hover {
+  text-decoration: none;
+  color: #333;
+}
+.elementor-widget-biblioteca-multimedia .tabs_multimedias .nav-item .titulo_tabs span {
+  display: none;
+}
+.elementor-widget-biblioteca-multimedia .tabs_multimedias .nav-item  b {
+font-weight: normal;
+}
+.elementor-widget-biblioteca-multimedia .tabs_multimedias  .nav-item .active {
+  color: var(--azul2);
+  font-size: 21px;
+  letter-spacing: -0.63px;
+  border-bottom: 5px solid var(--azul2);
+  padding-bottom: 14px;
+}
+.elementor-widget-biblioteca-multimedia .tabs_multimedias  .nav-item .active b {
+  font-weight: 700;
+}
+
+/* css galerias */
+.elementor-widget-biblioteca-multimedia .listado_loadmore .grid_galeria_mad {
+  max-width: 100%;
+  /* padding: 6px; */
+  float: left;
+  border: 3px solid #fff;
+}
+
+.elementor-widget-biblioteca-multimedia .listado_loadmore .grid_galeria_mad:nth-child(2n) {
+  max-width: 30%;
+}
+.elementor-widget-biblioteca-multimedia .listado_loadmore .grid_galeria_mad:nth-child(3n) {
+  max-width: 15%;
+}
+.elementor-widget-biblioteca-multimedia .listado_loadmore .grid_galeria_mad:nth-child(4n) {
+  max-width: 15%;
+}
+.elementor-widget-biblioteca-multimedia .listado_loadmore .grid_galeria_mad:nth-child(5n) {
+  max-width: 20%;
+}
+.elementor-widget-biblioteca-multimedia .link_vermascontent_tabs {
+  display: block;
+  text-align: center;
+  font-size: 19px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.elementor-widget-biblioteca-multimedia .link_vermascontent_tabs a {
+color: var(--blue);
+}
+.elementor-widget-biblioteca-multimedia .link_vermascontent_tabs ion-icon {
+margin-bottom: -4px;
+}
+.elementor-widget-biblioteca-multimedia .link_vermascontent_tabs a:hover {
+text-decoration: none;
+}
+
+.elementor-widget-biblioteca-multimedia .grid_galeria_mad img {
+width: 100%;
+height: 240px;
+object-fit: cover;
+}
+
+.elementor-widget-biblioteca-multimedia .grid_galeria_mad {
+position: relative;
+}
+
+.elementor-widget-biblioteca-multimedia .img__description_layer {
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background: rgba(0, 0, 0, 0.71);
+color: #fff;
+visibility: hidden;
+opacity: 0;
+display: flex;
+align-items: flex-end;
+padding: 20px;
+/* transition effect. not necessary */
+transition: opacity .2s, visibility .2s;
+}
+
+.elementor-widget-biblioteca-multimedia .grid_galeria_mad:hover .img__description_layer {
+visibility: visible;
+opacity: 1;
+}
+
+.elementor-widget-biblioteca-multimedia .img__description {
+transition: .2s;
+transform: translateY(1em);
+}
+
+.elementor-widget-biblioteca-multimedia .grid_galeria_mad:hover .img__description {
+transform: translateY(0);
+}
+
+.elementor-widget-biblioteca-multimedia .grid_galeria_mad .listadogaleri_vim {
+width: 100%;
+}
+.elementor-widget-biblioteca-multimedia .grid_galeria_mad .listadogaleri_vim h2 {
+font-size: 17px;
+line-height: 18px;
+}
+.elementor-widget-biblioteca-multimedia .grid_galeria_mad .listadogaleri_vim li {
+list-style: none;
+float: left;
+}
+.elementor-widget-biblioteca-multimedia .grid_galeria_mad .listadogaleri_vim .pertenece_a {
+margin-top: 10px;
+}
+.elementor-widget-biblioteca-multimedia .grid_galeria_mad .listadogaleri_vim li a {
+color: var(--naranja);
+font-size: 12px;
+}
+.elementor-widget-biblioteca-multimedia .grid_galeria_mad .listadogaleri_vim li ion-icon {
+font-size: 13px;
+margin-right: 6px;
+}
+.elementor-widget-biblioteca-multimedia .grid_galeria_mad a {
+color: #fff;
+text-decoration: none;
+}
+
+@media (max-width: 992px) {
+  .elementor-widget-biblioteca-multimedia .tabs_multimedias  .nav-item .titulo_tabs.active {
+    font-size: 14px;
+  }
+  .elementor-widget-biblioteca-multimedia .tabs_multimedias .nav-item .titulo_tabs {
+    font-size: 12px;
+    margin-right: 20px;
+  }
+
+  .elementor-widget-biblioteca-multimedia .tabs_multimedias ul{
+    padding-left: 10px;
+  }
+
+  .elementor-widget-biblioteca-multimedia .tabs_multimedias .tab-content {
+    overflow-x: scroll;
+  }
+
+  .elementor-widget-biblioteca-multimedia .tabs_multimedias .tab-content .listado_loadmore {
+    max-width: max-content;
+    width: max-content;
+  }
+
+  .elementor-widget-biblioteca-multimedia .list_articulos .listado_loadmore {
+    maring-top: 0;
+  }
+
+  .elementor-widget-biblioteca-multimedia .list_articulos .listado_loadmore .grid {
+    max-width: 70vw !important;
+  }
+
+  .elementor-widget-biblioteca-multimedia .list_articulos .listado_loadmore .grid:last-of-type {
+    margin-right: 15vw;
+  }
+
+  .elementor-widget-biblioteca-multimedia .list_articulos .listado_loadmore .grid h3 {
+    font-size:  13px;
+  }
+
+}
